@@ -1,16 +1,25 @@
-# React + Vite
+1. Frontend (React + Vite)
+- Setup: We started with the React + Vite template for fast development and HMR (Hot Module Replacement).
+- UI Components: Built pages for Products, Services, Cart, Orders, and Contact.
+- Routing: Used React Router for navigation between pages (Home, Products, Services, Cart, Contact, Dashboard).
+- API Integration: Connected frontend to backend using import.meta.env.VITE_API_URL for environment‑based API calls.
+- Deployment: Deployed frontend on Vercel, ensuring environment variables were set correctly for production.
+- Testing: Verified flows like signup/login, adding products to cart, making payments, and submitting contact forms directly from browser and mobile.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Backend (Node.js + Express)
+- Setup: Created an Express server with routes for authentication, products, services, cart, orders, and contact.
+- Database: Integrated MongoDB with Mongoose for schema definitions and data persistence.
+- Payments: Implemented Razorpay order creation and signature verification to securely handle transactions.
+- Contact Requests: Built an endpoint to capture and store user messages in MongoDB.
+- CORS: Configured to allow both local development and deployed frontend domains.
+- Deployment: Deployed backend on Render, connected to MongoDB Atlas for cloud database.
 
-Currently, two official plugins are available:
+3. End‑to‑End Flow
+- User Journey: Signup/Login → Browse Products/Services → Add to Cart → Checkout → Razorpay Payment → Order stored in MongoDB → Contact form submission.
+- Validation: Tested flows using Postman, browser, and mobile devices. Verified JSON responses for orders and contact requests.
+- Live Demo: Frontend available at https://cand-c-saa-s-frontend.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Next Steps
+- Build an Admin Dashboard to monitor Orders and Contact requests together.
+- Add Email notifications for new orders and contact submissions.
+- Improve UI/UX for payment success and contact confirmation pages
